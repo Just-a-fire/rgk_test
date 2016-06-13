@@ -134,6 +134,16 @@ $config = [
             'assignmentFile' => dirname(__DIR__) . '/common/components/rbac/assignments.php',
             'ruleFile' => dirname(__DIR__) . '/common/components/rbac/rules.php'
         ],
+
+        // custom sender
+        'sender' => [
+            'class' => 'app\custom\sender\Sender',
+            'paths' => [
+                'articles' => [
+                    'view' => '/user/articles/view/',
+                ]
+            ],
+        ],
         
     ],
     'modules' => [

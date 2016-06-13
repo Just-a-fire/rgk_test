@@ -126,7 +126,7 @@ class Event extends \yii\db\activeRecord
                     $notice->user_id = Notice::ALL;
                     $notice->subject = $subject;
                     $notice->content = $content;
-                    $notice->type = Notice::FLAG_TYPE_EMAIL | Notice::FLAG_TYPE_BROWSER;
+                    $notice->type = Notice::defaultType();
                     $notice->save();
                     // if ($notice->validate())
                     //     $notice->save();

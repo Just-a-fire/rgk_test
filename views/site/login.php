@@ -35,7 +35,7 @@ $this->title = 'Авторизация';
         <div class="form-group">
             <div class="col-lg-offset-1 col-lg-11" style="margin-bottom: 20px;">
                 <?= Html::submitButton('Войти', ['class' => 'btn btn-primary', 'name' => 'login-button', 'style' => 'min-width: 103px;']) ?>
-                <?= Html::a('Забыли пароль?', array('/site/forgot'), array('style' => 'display: inline-block; margin-left: 10px;')); ?>
+                <?= Html::a('Забыли пароль?', array('/site/forgot'), array('style' => 'display: none; margin-left: 10px;')); // inline-block ?>
             </div>
             <div class="col-lg-offset-1 col-lg-11">
                 Новый аккаунт?

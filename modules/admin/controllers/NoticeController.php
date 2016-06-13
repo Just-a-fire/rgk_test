@@ -49,7 +49,8 @@ class NoticeController extends Controller
 		$model = new Notice();
 		$baseUrl = \Yii::$app->components['urlManager']['baseUrl'];
 		
-		$user_list = array_merge([0 => Yii::t('notice', 'To all')], User::find()->select(['username', 'id'])->indexBy('id')->asArray()->column());
+		// $user_list = array_merge([0 => Yii::t('notice', 'To all')], User::find()->select(['username', 'id'])->indexBy('id')->asArray()->column());
+		$user_list = [0 => Yii::t('notice', 'To all')] + User::find()->select(['username', 'id'])->indexBy('id')->asArray()->column();
 		$type_list = Notice::typeDescription();
 		// $event_list = Event::::find()->select(['username', 'id'])->indexBy('id')->asArray()->column();
 
